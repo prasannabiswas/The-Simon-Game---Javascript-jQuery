@@ -2,11 +2,9 @@ var buttonColors = ["red", "blue", "green", "yellow"];
 var gamePattern = [];
 var userClickedPattern = [];
 var level = 0;
-
 var started = false;
 
 $(document).keypress(function(){
-
     if(!started){
         $("#level-title").text("Level " + level);
         nextSequence();
@@ -15,7 +13,6 @@ $(document).keypress(function(){
 });
 
 function nextSequence() {
-
     level++;
     $("#level-title").text("Level "+ level);
 
@@ -47,8 +44,6 @@ function checkAnswer(currentLevel) {
         }        
     }
     else {
-        console.log("wrong");
-
         playSound("wrong");
 
         $("body").addClass("game-over");
